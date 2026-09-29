@@ -31,6 +31,10 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`⚡ [AegisOps Backend API] Running on http://localhost:5000`);
-});
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`⚡ [AegisOps Backend API] Running on http://localhost:5000`);
+  });
+}
+
+export default app;
