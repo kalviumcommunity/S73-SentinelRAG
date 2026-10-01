@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Terminal, X, Zap, Copy, Check, Sparkles, Code, ArrowRight } from 'lucide-react';
 
+/**
+ * CyberCopilotDrawer Component
+ * Side drawer UI that provides an AI Copilot chat interface for synthesizing
+ * instant PowerShell, Bash, and Cloud API containment scripts.
+ */
 export default function CyberCopilotDrawer({ 
   isOpen, 
   onClose, 
