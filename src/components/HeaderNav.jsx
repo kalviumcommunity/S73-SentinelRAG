@@ -2,6 +2,11 @@ import React from 'react';
 import { useApp } from '../context/AppContext';
 import { Shield, Search, BookOpen, Upload, Activity, Command, ShieldAlert, Cpu } from 'lucide-react';
 
+/**
+ * HeaderNav Component
+ * Top navigation bar providing view switching, command palette triggers (Cmd+K),
+ * logo branding, and user profile status display.
+ */
 export default function HeaderNav() {
   const { currentView, setCurrentView, setIsCommandPaletteOpen } = useApp();
 
@@ -13,7 +18,7 @@ export default function HeaderNav() {
   ];
 
   return (
-    <header className="app-header">
+    <header className="app-header" role="banner">
       <div className="header-inner">
         {/* Logo */}
         <div className="logo-brand" onClick={() => setCurrentView('triage')}>
