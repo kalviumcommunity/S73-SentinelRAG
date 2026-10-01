@@ -13,6 +13,11 @@ import {
   Award
 } from 'lucide-react';
 
+/**
+ * RunbookExecutionView Component
+ * Renders an interactive step-by-step checklist workspace for incident response runbooks,
+ * complete with real-time timers, progress bars, and analyst audit logging.
+ */
 export default function RunbookExecutionView() {
   const { activeRunbookRun, setCurrentView, addToast, addActivityLog } = useApp();
 
