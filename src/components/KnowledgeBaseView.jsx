@@ -15,6 +15,11 @@ import {
   Sliders
 } from 'lucide-react';
 
+/**
+ * KnowledgeBaseView Component
+ * Renders full-text searchable cybersecurity knowledge corpus, multi-faceted
+ * document filtering (Type, Severity, Affected Product), and document cards.
+ */
 export default function KnowledgeBaseView() {
   const { documents, openDocumentViewer, startRunbookExecution } = useApp();
 
