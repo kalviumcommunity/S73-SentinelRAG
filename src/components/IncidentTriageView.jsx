@@ -3,6 +3,11 @@ import AlertFeed from './AlertFeed';
 import AlertDetail from './AlertDetail';
 import { ShieldAlert, Zap, CheckCircle2, Clock } from 'lucide-react';
 
+/**
+ * IncidentTriageView Component
+ * Renders the top-level triage metrics overview, real-time alert feed queue,
+ * and rapid threat containment workspace.
+ */
 export default function IncidentTriageView({
   alerts,
   selectedAlertId,
@@ -19,7 +24,11 @@ export default function IncidentTriageView({
   metrics
 }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+    <div 
+      role="region" 
+      aria-label="Incident Triage Dashboard" 
+      style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}
+    >
       {/* Simple 3 KPI Cards */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
         <div className="glass-panel" style={{ padding: '1.15rem', borderLeft: '4px solid var(--accent-crimson)' }}>
